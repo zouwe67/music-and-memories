@@ -55,3 +55,11 @@ prevBtn.addEventListener('click', () => {
 
 // 初始化第一首
 loadSong(currentIndex);
+// 监听播放结束事件
+audio.addEventListener('ended', () => {
+    // 自动切换到下一首
+    currentIndex = (currentIndex + 1) % items.length;
+    loadSong(currentIndex);
+    audio.play();
+    playBtn.innerText = "暂停";
+});

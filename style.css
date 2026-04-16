@@ -71,3 +71,21 @@ body {
     color: #ffcc00;
     font-weight: bold;
 }
+.progress-container {
+    width: 90%;
+    margin: 15px auto;
+}
+
+#progress-bar {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #ffcc00; 
+}
+
+.time-info {
+    font-size: 12px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+}

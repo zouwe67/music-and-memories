@@ -2,80 +2,54 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>相信未来热泪盈眶</title>
+    <title>田野里的浪漫交响</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="overlay"></div>
-    <div class="container">
-        <header>
-            <h1>相信未来热泪盈眶</h1>
-            <p>那些年一个人在北京走一段路</p>
-        </header>
+    
+    <div class="main-layout">
+        
+        <div class="container player-side">
+            <header>
+                <h1>金色旋律</h1>
+                <p>油菜花开时的浪漫</p>
+            </header>
 
-        <div class="player-container">
-            <div class="song-info">
-                <h2 id="current-title">请选择歌曲</h2>
-            </div>
-            <div class="song-info">
-    <h2 id="current-title">请选择歌曲</h2>
-</div>
-
-<div class="main-layout">
-    <div class="container player-side">
-        <header>
-            <h1>相信未来热泪盈眶</h1>
-            <p>那些年一个人在北京走一段路</p>
-        </header>
-        <div class="player-container">
-            <div class="song-info">
-                <h2 id="current-title">请选择歌曲</h2>
-            </div>
-            <div class="progress-container">
-                <input type="range" id="progress-bar" value="0" max="100">
-                <div class="time-info">
-                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            <div class="player-container">
+                <div class="song-info">
+                    <h2 id="current-title">请选择歌曲</h2>
                 </div>
-            </div>
-            <div class="controls">
-                <button id="prev">上一首</button>
-                <button id="play-pause">播放</button>
-                <button id="next">下一首</button>
-            </div>
-            <audio id="audio-player" src=""></audio>
-        </div>
-        <ul class="playlist" id="playlist">
-            <li data-src="music/熱河相信未來跨年現場.mp3">第一首：熱河相信未來跨年現場</li>
-            <li data-src="music/關於鄭州的記憶.mp3">第二首：關於鄭州的記憶</li>
-            <li data-src="music/你離開了南京，從此沒有人和我說話.mp3">第三首：你離開了南京，從此沒有人和我說話</li>
-        </ul>
-    </div>
+                
+                <div class="progress-container">
+                    <input type="range" id="progress-bar" value="0" max="100">
+                    <div class="time-info">
+                        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+                </div>
 
-    <div class="lyrics-side">
-        <div id="lyrics-container">
-            <p class="lyric-line">选择歌曲开始浪漫之旅...</p>
-        </div>
-    </div>
-</div>
-<div class="controls">
-            <div class="controls">
-                <button id="prev">上一首</button>
-                <button id="play-pause">播放</button>
-                <button id="next">下一首</button>
+                <div class="controls">
+                    <button id="prev">上一首</button>
+                    <button id="play-pause">播放</button>
+                    <button id="next">下一首</button>
+                </div>
+                
+                <audio id="audio-player" src=""></audio>
             </div>
-            
-            <audio id="audio-player" src=""></audio>
+
+            <ul class="playlist" id="playlist">
+                <li data-src="music/熱河相信未來跨年現場.mp3">第一首：熱河相信未來跨年現場</li>
+                <li data-src="music/關於鄭州的記憶.mp3">第二首：關於鄭州的記憶</li>
+                <li data-src="music/你離開了南京，從此沒有人和我說話.mp3">第三首：你離開了南京，從此沒有人和我說話</li>
+            </ul>
         </div>
 
-       <ul class="playlist" id="playlist">
-    <li data-src="music/熱河相信未來跨年現場.mp3">第一首：熱河相信未來跨年現場</li>
-    
-    <li data-src="music/關於鄭州的記憶.mp3">第二首：關於鄭州的記憶</li>
-    
-    <li data-src="music/你離開了南京，從此沒有人和我說話.mp3">第三首：你離開了南京，從此沒有人和我說話</li>
-</ul>
-        </ul>
-    </div>
-    <script src="script.js"></script>
+        <div class="lyrics-side">
+            <div id="lyrics-container">
+                <p class="lyric-line">点击歌曲开始浪漫之旅...</p>
+            </div>
+        </div>
+
+    </div> <script src="script.js"></script>
 </body>
 </html>

@@ -121,3 +121,27 @@ progressBar.addEventListener('input', () => {
 });
 
 // --- 增强版进度条逻辑结束 ---
+// 1. 定义歌词数据 (秒数: 歌词文字)
+const lyricsData = {
+    0: { 0: "热河 - 相信未来现场", 5: "没有人在热河路谈恋爱", 10: "总有人在热河路等车", 15: "这条路从来不缺故事" },
+    1: { 0: "关于郑州的记忆", 5: "关于郑州我想的全是你", 10: "想来想去都是那些往事" },
+    2: { 0: "你离开了南京", 5: "从此没有人和我说话", 10: "这浪漫的野花也谢了" }
+};
+
+const lyricsContainer = document.getElementById('lyrics-container');
+
+// 2. 更新歌词显示的函数
+audio.addEventListener('timeupdate', () => {
+    const currentSongLyrics = lyricsData[currentIndex];
+    if (!currentSongLyrics) return;
+
+    const currentTime = Math.floor(audio.currentTime);
+    
+    // 寻找当前时间点对应的歌词
+    for (let time in currentSongLyrics) {
+        if (currentTime == time) {
+            // 渲染歌词到屏幕
+            lyricsContainer.innerHTML = `<p class="lyric-line active">${currentSongLyrics[time]}</p>`;
+        }
+    }
+});
